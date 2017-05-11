@@ -5,6 +5,8 @@ from git import Repo
 
 
 class Command(DodoCommand):  # noqa
+    safe = False
+
     @staticmethod
     def _split_for(x):
         return x + "_split"
