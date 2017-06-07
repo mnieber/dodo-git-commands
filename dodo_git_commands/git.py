@@ -1,6 +1,6 @@
 """Init the source files from the configured git url."""
 
-from . import DodoCommand
+from dodo_commands.extra.standard_commands import DodoCommand
 import argparse
 
 
