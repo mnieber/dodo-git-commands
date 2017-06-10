@@ -7,7 +7,6 @@ from plumbum.cmd import git
 
 class Command(DodoCommand):  # noqa
     help = ""
-    decorators = []
 
     def add_arguments_imp(self, parser):  # noqa
         parser.add_argument('branch')

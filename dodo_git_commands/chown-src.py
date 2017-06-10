@@ -6,7 +6,6 @@ from plumbum.cmd import whoami
 
 class Command(DodoCommand):  # noqa
     help = "Changes the owner of ${/ROOT/src_dir} to `whoami`:`whoami`"
-    decorators = []
 
     def handle_imp(self, **kwargs):  # noqa
         me = whoami()[:-1]
