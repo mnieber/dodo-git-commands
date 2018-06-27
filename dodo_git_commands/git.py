@@ -4,10 +4,7 @@ from dodo_commands.framework import Dodo
 
 def _args():
     parser = ArgumentParser()
-    parser.add_argument(
-        'git_args',
-        nargs=REMAINDER
-    )
+    parser.add_argument('git_args', nargs=REMAINDER)
     args = Dodo.parse_args(parser)
     return args
 
@@ -17,6 +14,4 @@ if Dodo.is_main(__name__):
     Dodo.runcmd(
         [
             "git",
-        ] + args.git_args,
-        cwd=Dodo.get_config("/ROOT/src_dir")
-    )
+        ] + args.git_args, cwd=Dodo.get_config("/ROOT/src_dir"))

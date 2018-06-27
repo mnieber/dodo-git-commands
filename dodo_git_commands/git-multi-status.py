@@ -21,11 +21,8 @@ if Dodo.is_main(__name__):
             with local.cwd(repo_dir):
                 status = git('status')
                 files_to_commit = (
-                    'nothing to commit, working directory clean' not in status
-                )
-                diverged = (
-                    'Your branch is up-to-date with' not in status
-                )
+                    'nothing to commit, working directory clean' not in status)
+                diverged = ('Your branch is up-to-date with' not in status)
 
                 if files_to_commit or diverged:
                     print(bordered(repo))
@@ -34,9 +31,5 @@ if Dodo.is_main(__name__):
                         print("Files to commit")
                     if diverged:
                         print("Branch has diverged")
-                    print(
-                        "cd %s; %s&\n" % (
-                            repo_dir,
-                            'git gui' if files_to_commit else 'gitk'
-                        )
-                    )
+                    print("cd %s; %s&\n" % (repo_dir, 'git gui'
+                                            if files_to_commit else 'gitk'))
