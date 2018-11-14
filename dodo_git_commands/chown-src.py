@@ -14,7 +14,7 @@ if Dodo.is_main(__name__):
     args = _args()
     me = whoami()[:-1]
     src_dir = Dodo.get_config("/ROOT/src_dir")
-    Dodo.runcmd(
+    Dodo.run(
         ["sudo", "chown", "-R",
          "%s:%s" % (me, me),
          os.path.basename(src_dir)],

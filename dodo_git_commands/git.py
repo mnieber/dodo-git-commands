@@ -11,7 +11,7 @@ def _args():
 
 if Dodo.is_main(__name__):
     args = _args()
-    Dodo.runcmd(
+    Dodo.run(
         [
             "git",
         ] + args.git_args, cwd=Dodo.get_config("/ROOT/src_dir"))
