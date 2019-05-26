@@ -34,5 +34,5 @@ if Dodo.is_main(__name__):
                         print("Files to commit")
                     if diverged:
                         print("Branch has diverged")
-                    print("cd %s; %s&\n" % (repo_dir, 'git gui'
-                                            if files_to_commit else 'gitk'))
+                    print("cd %s; %s&\n" %
+                          (repo_dir, 'git gui' if files_to_commit else 'gitk'))
