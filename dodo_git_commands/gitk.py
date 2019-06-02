@@ -1,5 +1,6 @@
 from argparse import ArgumentParser
-from dodo_commands.framework import Dodo, ConfigArg
+
+from dodo_commands import Dodo, ConfigArg
 
 
 def _args():
