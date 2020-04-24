@@ -1,12 +1,9 @@
-from argparse import ArgumentParser, REMAINDER
-
 from dodo_commands import Dodo
 
 
 def _args():
-    parser = ArgumentParser()
-    parser.add_argument('git_args', nargs=REMAINDER)
-    args = Dodo.parse_args(parser)
+    Dodo.parser.add_argument('git_args', nargs="*")
+    args = Dodo.parse_args()
     return args
 
 
